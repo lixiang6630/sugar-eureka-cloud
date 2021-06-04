@@ -1,0 +1,54 @@
+{
+  "groups": [
+    {
+      "name": "oss",
+      "type": "com.component.oss.autoconfigure.OssProperties",
+      "sourceType": "com.component.oss.autoconfigure.OssProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "oss.access-key-id",
+      "type": "java.lang.String",
+      "description": "accessKey Id",
+      "sourceType": "com.component.oss.autoconfigure.OssProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "oss.access-key-secret",
+      "type": "java.lang.String",
+      "description": "accessKey Secret",
+      "sourceType": "com.component.oss.autoconfigure.OssProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "oss.bucket-name",
+      "type": "java.lang.String",
+      "description": "bucket name",
+      "sourceType": "com.component.oss.autoconfigure.OssProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "oss.disk-name-prefix",
+      "type": "java.lang.String",
+      "description": "父文件夹路径 无自动创建",
+      "sourceType": "com.component.oss.autoconfigure.OssProperties",
+      "defaultValue": "resources\/"
+    },
+    {
+      "name": "oss.endpoint",
+      "type": "java.lang.String",
+      "description": "地域节点",
+      "sourceType": "com.component.oss.autoconfigure.OssProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "oss.request-url",
+      "type": "java.lang.String",
+      "description": "文件访问域名,Bucket域名\/自定义域名",
+      "sourceType": "com.component.oss.autoconfigure.OssProperties",
+      "defaultValue": ""
+    }
+  ],
+  "hints": []
+}

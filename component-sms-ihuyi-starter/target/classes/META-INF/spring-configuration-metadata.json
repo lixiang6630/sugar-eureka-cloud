@@ -1,0 +1,54 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.component.sms.ihuyi.autoconfigure.SmsIhuyiProperties",
+      "name": "sms.ihuyi",
+      "type": "com.component.sms.ihuyi.autoconfigure.SmsIhuyiProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.component.sms.ihuyi.autoconfigure.SmsIhuyiProperties",
+      "defaultValue": "",
+      "name": "sms.ihuyi.account",
+      "description": "账号",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.component.sms.ihuyi.autoconfigure.SmsIhuyiProperties",
+      "defaultValue": "验证码：{}，请您在10分钟内填写。如非本人操作，请忽略本短信。",
+      "name": "sms.ihuyi.content",
+      "description": "模板 验证码参数位用{}代替",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.component.sms.ihuyi.autoconfigure.SmsIhuyiProperties",
+      "defaultValue": 4,
+      "name": "sms.ihuyi.length",
+      "description": "验证码长度 默认4位",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.component.sms.ihuyi.autoconfigure.SmsIhuyiProperties",
+      "defaultValue": "",
+      "name": "sms.ihuyi.password",
+      "description": "密码",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.component.sms.ihuyi.autoconfigure.SmsIhuyiProperties",
+      "defaultValue": "",
+      "name": "sms.ihuyi.sign",
+      "description": "短信签名 多签名模式下使用 无签名使用默认签名",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.component.sms.ihuyi.autoconfigure.SmsIhuyiProperties",
+      "defaultValue": "",
+      "name": "sms.ihuyi.url",
+      "description": "互相无线服务url",
+      "type": "java.lang.String"
+    }
+  ]
+}

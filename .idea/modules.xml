@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/cloud.iml" filepath="$PROJECT_DIR$/.idea/cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-dependencies/cloud-dependencies.iml" filepath="$PROJECT_DIR$/cloud-dependencies/cloud-dependencies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-parent/cloud-parent.iml" filepath="$PROJECT_DIR$/cloud-parent/cloud-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-webcore/cloud-webcore.iml" filepath="$PROJECT_DIR$/cloud-webcore/cloud-webcore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common-base/common-base.iml" filepath="$PROJECT_DIR$/common-base/common-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common-generator/common-generator.iml" filepath="$PROJECT_DIR$/common-generator/common-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/component-cos-starter/component-cos-starter.iml" filepath="$PROJECT_DIR$/component-cos-starter/component-cos-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/component-mpush-starter/component-mpush-starter.iml" filepath="$PROJECT_DIR$/component-mpush-starter/component-mpush-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/component-oss-starter/component-oss-starter.iml" filepath="$PROJECT_DIR$/component-oss-starter/component-oss-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/component-push-jiguang-starter/component-push-jiguang-starter.iml" filepath="$PROJECT_DIR$/component-push-jiguang-starter/component-push-jiguang-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/component-sms-ihuyi-starter/component-sms-ihuyi-starter.iml" filepath="$PROJECT_DIR$/component-sms-ihuyi-starter/component-sms-ihuyi-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/component-sms-yuntongxun-starter/component-sms-yuntongxun-starter.iml" filepath="$PROJECT_DIR$/component-sms-yuntongxun-starter/component-sms-yuntongxun-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/component-xxl-job-core/component-xxl-job-core.iml" filepath="$PROJECT_DIR$/component-xxl-job-core/component-xxl-job-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nacos-cloud-parent/nacos-cloud-parent.iml" filepath="$PROJECT_DIR$/nacos-cloud-parent/nacos-cloud-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xxl-job-core/xxl-job-core.iml" filepath="$PROJECT_DIR$/xxl-job-core/xxl-job-core.iml" />
+    </modules>
+  </component>
+</project>

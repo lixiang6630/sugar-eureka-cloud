@@ -1,0 +1,48 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.component.sms.yuntongxun.autoconfigure.SmsYuntongxunProperties",
+      "name": "sms.yuntongxun",
+      "type": "com.component.sms.yuntongxun.autoconfigure.SmsYuntongxunProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.component.sms.yuntongxun.autoconfigure.SmsYuntongxunProperties",
+      "defaultValue": "",
+      "name": "sms.yuntongxun.account-sid",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.component.sms.yuntongxun.autoconfigure.SmsYuntongxunProperties",
+      "defaultValue": "",
+      "name": "sms.yuntongxun.app-id",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.component.sms.yuntongxun.autoconfigure.SmsYuntongxunProperties",
+      "defaultValue": "",
+      "name": "sms.yuntongxun.auth-token",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.component.sms.yuntongxun.autoconfigure.SmsYuntongxunProperties",
+      "defaultValue": "",
+      "name": "sms.yuntongxun.connect-timeout",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.component.sms.yuntongxun.autoconfigure.SmsYuntongxunProperties",
+      "defaultValue": "",
+      "name": "sms.yuntongxun.req-timeout",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.component.sms.yuntongxun.autoconfigure.SmsYuntongxunProperties",
+      "defaultValue": "https:\/\/app.cloopen.com:8883",
+      "name": "sms.yuntongxun.url",
+      "type": "java.lang.String"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+com\component\cos\autoconfigure\CosAutoConfiguration.class
+com\component\cos\CosResult.class
+com\component\cos\CosHelper.class
+com\component\cos\autoconfigure\CosProperties.class
+META-INF\spring-configuration-metadata.json

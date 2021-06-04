@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.common</groupId>
+    <artifactId>common-generator</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <packaging>jar</packaging>
+
+    <name>common-generator</name>
+    <description>代码生成器</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <mysql-connector-java.version>5.1.38</mysql-connector-java.version>
+        <mybatis.plus.generater.version>3.1.2</mybatis.plus.generater.version>
+        <mybatis.plus.core.version>3.1.1</mybatis.plus.core.version>
+        <freemarker.version>2.3.29</freemarker.version>
+        <slf4j.version>1.7.25</slf4j.version>
+        <spring.core.version>4.1.5.RELEASE</spring.core.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector-java.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
+            <!-- 如果项目中依赖了slf4j,放开此段注释 -->
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>${mybatis.plus.generater.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-core</artifactId>
+            <version>${mybatis.plus.core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>${freemarker.version}</version>
+        </dependency>
+    </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>NexusReleases</name>
+<!--            <url>http://106.12.154.67:8081/repository/maven-releases/</url>-->
+            <url>http://nexus.injoy.einno.com/repository/maven-releases/</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>snapshots</name>
+<!--            <url>http://106.12.154.67:8081/repository/maven-snapshots/</url>-->
+            <url>http://nexus.injoy.einno.com/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+</project>

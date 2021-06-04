@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-webcore" />
+        <module name="common-base" />
+        <module name="component-oss-starter" />
+        <module name="component-mpush-starter" />
+        <module name="common-generator" />
+        <module name="component-sms-ihuyi-starter" />
+        <module name="component-push-jiguang-starter" />
+        <module name="nacos-cloud-parent" />
+        <module name="component-sms-yuntongxun-starter" />
+        <module name="xxl-job-core" />
+        <module name="component-cos-starter" />
+        <module name="component-xxl-job-core" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud-dependencies" target="1.8" />
+      <module name="cloud-parent" target="1.8" />
+      <module name="cloud-webcore" target="1.8" />
+      <module name="common-base" target="1.8" />
+      <module name="common-generator" target="1.5" />
+      <module name="component-cos-starter" target="1.8" />
+      <module name="component-im-starter" target="1.5" />
+      <module name="component-mpush-starter" target="8" />
+      <module name="component-oss-starter" target="1.5" />
+      <module name="component-push-jiguang-starter" target="1.5" />
+      <module name="component-sms-ihuyi-starter" target="1.8" />
+      <module name="component-sms-yuntongxun-starter" target="1.8" />
+      <module name="component-xxl-job-core" target="1.8" />
+      <module name="nacos-cloud-parent" target="1.8" />
+      <module name="xxl-job-core" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="component-xxl-job-core" options="" />
+      <module name="nacos-cloud-parent" options="-parameters" />
+    </option>
+  </component>
+</project>
