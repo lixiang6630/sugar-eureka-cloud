@@ -15,6 +15,7 @@
  */
 package com.common.base.util;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -24,6 +25,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
+@Slf4j
 public class HttpKit {
 
     public static String getIp(){
@@ -92,7 +94,7 @@ public class HttpKit {
 
 
         } catch (Exception e) {
-            System.out.println("发送GET请求出现异常！" + e);
+            log.error("发送GET请求出现异常！",e);
             e.printStackTrace();
         }
         // 使用finally块来关闭输入流
@@ -199,7 +201,7 @@ public class HttpKit {
             }
 
         } catch (Exception e) {
-            System.out.println("发送 POST 请求出现异常！" + e);
+            log.error("发送 POST 请求出现异常！" , e);
             e.printStackTrace();
         }
         // 使用finally块来关闭输出流、输入流

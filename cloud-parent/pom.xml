@@ -28,6 +28,7 @@
         <redisson.version>3.5.4</redisson.version>
         <jedis.version>2.9.0</jedis.version>
         <oss.version>2.8.2</oss.version>
+        <es.version>7.14.0</es.version>
     </properties>
 
     <dependencies>

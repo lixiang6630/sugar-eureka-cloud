@@ -74,14 +74,12 @@
         <repository>
             <id>releases</id>
             <name>NexusReleases</name>
-<!--            <url>http://106.12.154.67:8081/repository/maven-releases/</url>-->
             <url>http://nexus.injoy.einno.com/repository/maven-releases/</url>
         </repository>
 
         <snapshotRepository>
             <id>snapshots</id>
             <name>snapshots</name>
-<!--            <url>http://106.12.154.67:8081/repository/maven-snapshots/</url>-->
             <url>http://nexus.injoy.einno.com/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>

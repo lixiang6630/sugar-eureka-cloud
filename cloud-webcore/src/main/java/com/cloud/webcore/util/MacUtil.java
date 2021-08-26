@@ -1,6 +1,7 @@
 package com.cloud.webcore.util;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.cloud.webcore.model.LocationVo;
 import com.common.base.util.HttpKit;
@@ -15,7 +16,10 @@ import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -42,15 +46,78 @@ public class MacUtil {
         if (ip.equals("0:0:0:0:0:0:0:1")) {
             ip = "本地";
         }
+        String[] split = ip.split(",");
+        if(split.length > 1){
+            ip = split[0];
+        }
         return ip;
+    }
+    public static LocationVo getCurrentLocation(){
+        String ipAddr = MacUtil.getIpAddr(com.common.base.util.HttpKit.getRequest());
+        return MacUtil.getLocationByIp(ipAddr);
     }
 
     public static LocationVo getLocationByIp(String ip){
         String url = "http://ip-api.com/json/"+ip+"?lang=en-us";
         String s = HttpKit.sendGet(url, new HashMap<>());
-        log.info("获取位置信息data=【{}】",s);
-        LocationVo locationVo = JSONObject.parseObject(s,LocationVo.class);
+        LocationVo locationVo = null;
+        try {
+            locationVo = JSONObject.parseObject(s,LocationVo.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return locationVo;
+    }
+
+    public static String getNationByIpWithJson(String ip){
+        String url = "http://ip-api.com/json/"+ip+"?lang=en-us";
+        String s = HttpKit.sendGet(url, new HashMap<>());
+        String nation = null;
+        try {
+            LocationVo locationVo = JSONObject.parseObject(s,LocationVo.class);
+            nation = locationVo.getCountry();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return nation;
+    }
+
+    public static String getNationByIpWithBatch(String ip){
+        String url = "http://ip-api.com/batch";
+        List<Map> pa = new ArrayList<>();
+        Map map = new HashMap();
+        map.put("query",ip);
+        map.put("lang","zh");
+        pa.add(map);
+        String post = HttpKit.sendPost(url, JSON.toJSONString(pa));
+        String country = null;
+        try {
+            JSONArray objects = JSONArray.parseArray(post);
+            JSONObject jsonObject = objects.getJSONObject(0);
+            country = jsonObject.get("country").toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return country;
+    }
+
+    public static List<LocationVo> getNationsByIp(List<String> ips){
+        String url = "http://ip-api.com/batch";
+        List<Map> pa = new ArrayList<>();
+        for (String ip : ips) {
+            Map map = new HashMap();
+            map.put("query",ip);
+            map.put("lang","zh");
+            pa.add(map);
+        }
+        String post = HttpKit.sendPost(url, JSON.toJSONString(pa));
+        List<LocationVo> locationVos = null;
+        try {
+            locationVos = JSONArray.parseArray(post, LocationVo.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return locationVos;
     }
 
     /**
@@ -233,14 +300,4 @@ public class MacUtil {
         }
         return result;
     }
-
-    public static void main(String[] args) {
-        String url = "http://ip-api.com/json/"+"98.201.186.147"+"?lang=en-us";
-        String s = HttpKit.sendGet(url, new HashMap<>());
-        LocationVo locationVo = JSONObject.parseObject(s,LocationVo.class);
-        System.out.println(JSON.toJSONString(locationVo));
-    }
-
-
-
 }
