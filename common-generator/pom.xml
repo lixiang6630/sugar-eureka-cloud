@@ -57,18 +57,30 @@
         </dependency>
     </dependencies>
 
+<!--    <distributionManagement>-->
+<!--        <repository>-->
+<!--            <id>releases</id>-->
+<!--            <name>NexusReleases</name>-->
+<!--            <url>http://nexus.injoy.einno.com/repository/maven-releases/</url>-->
+<!--        </repository>-->
+
+<!--        <snapshotRepository>-->
+<!--            <id>snapshots</id>-->
+<!--            <name>snapshots</name>-->
+<!--            <url>http://nexus.injoy.einno.com/repository/maven-snapshots/</url>-->
+<!--        </snapshotRepository>-->
+<!--    </distributionManagement>-->
     <distributionManagement>
         <repository>
-            <id>releases</id>
-            <name>NexusReleases</name>
-            <url>http://nexus.injoy.einno.com/repository/maven-releases/</url>
+            <id>rdc-releases</id>
+            <name>rdc-releases</name>
+            <url>https://packages.aliyun.com/maven/repository/2140311-release-dkiMKF/</url>
         </repository>
 
         <snapshotRepository>
-            <id>snapshots</id>
-            <name>snapshots</name>
-            <url>http://nexus.injoy.einno.com/repository/maven-snapshots/</url>
+            <id>rdc-snapshots</id>
+            <name>rdc-snapshots</name>
+            <url>https://packages.aliyun.com/maven/repository/2140311-snapshot-6FUrDY/</url>
         </snapshotRepository>
     </distributionManagement>
-
 </project>

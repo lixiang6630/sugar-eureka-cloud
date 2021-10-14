@@ -28,7 +28,23 @@ public class GlobalExceptionHandler {
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
     public Resp<Void> paramsValidException(SelfNoticeException ex) {
-        log.info("ParametersExceptionHandler 全局异常拦截 find error,errocode={},errormsg={}", ex.getCode(), ex.getMessage());
+        log.error("SelfNoticeException 自定义异常拦截 find error,errocode={},errormsg={}", ex.getCode(), ex.getMessage());
         return new Resp<>(ex.getCode(), ex.getMessage());
+    }
+    /**
+     * 全局异常拦截
+     */
+    @ExceptionHandler(RuntimeException.class)
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody
+    public Resp<Void> globalException(SelfNoticeException ex) {
+        log.error("RuntimeException 全局异常拦截 find error,errocode={},errormsg={}", ex.getCode(), ex.getMessage());
+        return new Resp<>(ex.getCode(), ex.getMessage());
+    }
+    @ExceptionHandler(value =Exception.class)
+    @ResponseBody
+    public Resp<Void> exceptionHandler( Exception e){
+        log.error("未知异常！原因是:",e);
+        return Resp.error(e.getMessage());
     }
 }
