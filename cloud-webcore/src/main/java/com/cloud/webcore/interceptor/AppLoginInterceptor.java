@@ -131,6 +131,13 @@ public class AppLoginInterceptor implements HandlerInterceptor {
                 RenderUtil.renderJson(response, JsonUtils.beanToJson(new Resp<Void>(401, "User login expiration")));
                 return false;
             }
+            boolean checkUserStateByTokenResult = loginService.checkUserStateByToken(userId, token);
+            logger.info("loginService 检查用户状态结果【{}】",checkUserStateByTokenResult);
+            if (!checkUserStateByTokenResult) {
+                logger.warn("AppLoginInterceptor preHandle checkUserStateByToken not pass");
+                RenderUtil.renderJson(response, JsonUtils.beanToJson(new Resp<Void>(401, "User login expiration")));
+                return false;
+            }
             long diff = DateUtil.getDayDiff(tokenInfo.getExpiredDate(), new Date());
             //过期时间不到2天，重新生成下token
             if (diff <= 1) {
@@ -158,6 +165,12 @@ public class AppLoginInterceptor implements HandlerInterceptor {
                 Req<Void> req = new Req<Void>();
                 Resp<Void> resp = partnerLoginService.partnerCheckLogin(req);
                 if (!resp.isSuccess()) {
+                    RenderUtil.renderJson(response, JsonUtils.beanToJson(new Resp<Void>(401, "User login authentication failed")));
+                    return false;
+                }
+                Boolean checkUserState = partnerLoginService.partnerCheckUserState(req).getData();
+                logger.info("partnerLoginService 检查用户状态结果【{}】",checkUserState);
+                if (!checkUserState) {
                     RenderUtil.renderJson(response, JsonUtils.beanToJson(new Resp<Void>(401, "User login authentication failed")));
                     return false;
                 }

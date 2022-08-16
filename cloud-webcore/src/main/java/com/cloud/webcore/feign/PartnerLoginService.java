@@ -16,7 +16,6 @@ public interface PartnerLoginService {
 
     //根据token检查用户状态
     @PostMapping("/partnerCheckUserState")
-    public Resp<Void> partnerCheckUserState(Req<SessionUser> req);
-
+    public Resp<Boolean> partnerCheckUserState(Req<Void> req);
 }
 

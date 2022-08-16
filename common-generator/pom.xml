@@ -74,13 +74,19 @@
         <repository>
             <id>rdc-releases</id>
             <name>rdc-releases</name>
-            <url>https://packages.aliyun.com/maven/repository/2140311-release-dkiMKF/</url>
+            <!--lawrence-->
+            <!--<url>https://packages.aliyun.com/maven/repository/2140311-release-dkiMKF/</url>-->
+            <!--car-->
+            <url>https://packages.aliyun.com/maven/repository/2187507-release-syedXQ/</url>
         </repository>
 
         <snapshotRepository>
             <id>rdc-snapshots</id>
             <name>rdc-snapshots</name>
-            <url>https://packages.aliyun.com/maven/repository/2140311-snapshot-6FUrDY/</url>
+            <!--lawrence-->
+            <!--<url>https://packages.aliyun.com/maven/repository/2140311-snapshot-6FUrDY/</url>-->
+            <!--car-->
+            <url>https://packages.aliyun.com/maven/repository/2187507-snapshot-Gfim8t/</url>
         </snapshotRepository>
     </distributionManagement>
 </project>

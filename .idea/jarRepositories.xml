@@ -57,6 +57,21 @@
       <option name="url" value="http://8.210.4.12:8081/repository/maven-releases/" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="rdc-releases" />
+      <option name="name" value="rdc-releases" />
+      <option name="url" value="https://packages.aliyun.com/maven/repository/2140311-release-dkiMKF/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="rdc-snapshots" />
+      <option name="name" value="rdc-snapshots" />
+      <option name="url" value="https://packages.aliyun.com/maven/repository/2187507-snapshot-Gfim8t/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="rdc-releases" />
+      <option name="name" value="rdc-releases" />
+      <option name="url" value="https://packages.aliyun.com/maven/repository/2187507-release-syedXQ/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="snapshots" />
       <option name="name" value="snapshots" />
       <option name="url" value="http://nexus.injoy.einno.com/repository/maven-snapshots/" />
@@ -85,6 +100,11 @@
       <option name="id" value="snapshots" />
       <option name="name" value="snapshots" />
       <option name="url" value="https://maven.aliyun.com/nexus/content/groups/public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="rdc-snapshots" />
+      <option name="name" value="rdc-snapshots" />
+      <option name="url" value="https://packages.aliyun.com/maven/repository/2140311-snapshot-6FUrDY/" />
     </remote-repository>
   </component>
 </project>

@@ -10,4 +10,7 @@ public interface BaseLoginService {
 
     //刷新用户token
     public String refreshToken(Long userId);
+
+    //根据token检查用户登录状态
+    public boolean checkUserStateByToken(Long userId,String token);
 }

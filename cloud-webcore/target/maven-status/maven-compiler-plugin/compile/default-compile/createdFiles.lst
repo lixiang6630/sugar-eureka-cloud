@@ -2,6 +2,7 @@ com\cloud\webcore\feign\PartnerLoginService.class
 com\cloud\webcore\util\RedisUtil.class
 com\cloud\webcore\config\redisson\RedissonAutoConfiguration.class
 com\cloud\webcore\util\TokenUtil.class
+com\cloud\webcore\util\CommonUtil.class
 com\cloud\webcore\config\BodyReaderHttpServletRequestWrapper$1.class
 com\cloud\webcore\util\SpringContextHolder.class
 com\cloud\webcore\config\SwaggerConfig.class
