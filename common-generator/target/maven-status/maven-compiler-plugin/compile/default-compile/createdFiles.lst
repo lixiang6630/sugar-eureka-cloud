@@ -1,6 +1,0 @@
-com\common\generator\model\GenInfo.class
-com\common\generator\utils\UtilCollection.class
-com\common\generator\CodeCreateExample.class
-com\common\generator\utils\MybatisGenUtils.class
-com\common\generator\utils\MybatisGenUtils$1.class
-com\common\generator\utils\GenInfoBuilder.class

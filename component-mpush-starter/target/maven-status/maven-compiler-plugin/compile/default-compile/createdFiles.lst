@@ -1,6 +1,0 @@
-com\component\mpush\MpushSender.class
-com\component\mpush\autoconfigure\PushAliyunAutoConfiguration.class
-com\component\mpush\autoconfigure\PushAliyunProperties.class
-com\component\mpush\model\IOSMpushParam.class
-com\component\mpush\model\ANDMpushParam.class
-META-INF\spring-configuration-metadata.json

@@ -1,6 +1,0 @@
-com\component\oss\OssHelper.class
-com\component\oss\Constant.class
-com\component\oss\autoconfigure\OssProperties.class
-com\component\oss\OssResult.class
-com\component\oss\autoconfigure\OssAutoConfiguration.class
-META-INF\spring-configuration-metadata.json

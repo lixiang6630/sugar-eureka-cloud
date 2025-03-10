@@ -9,3 +9,7 @@ sugar-user/sugar-user-entity/target/sugar-user-entity-1.0.0-SNAPSHOT.jar
 *.jar
 *.jar
 sugar-user/sugar-user-entity/target/sugar-user-entity-1.0.0-SNAPSHOT.jar
+*.iml
+*.xml
+*.class
+*.jar
