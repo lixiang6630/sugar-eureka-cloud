@@ -1,6 +1,7 @@
 
 *.iml
 *.idea
+*.class
 target
 LOG_PATH_IS_UNDEFINED/LOG_FILE_IS_UNDEFINED
 sugar-user/sugar-user-entity/target/sugar-user-entity-1.0.0-SNAPSHOT.jar
