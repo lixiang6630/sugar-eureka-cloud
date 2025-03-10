@@ -31,7 +31,23 @@ public class HttpKit {
     public static String getIp(){
        return HttpKit.getRequest().getRemoteHost();
     }
-
+    public static String getBodyStr(HttpServletRequest request) {
+        String str, wholeStr = null;
+        try {
+            BufferedReader br = request.getReader();
+            wholeStr = "";
+            while ((str = br.readLine()) != null) {
+                wholeStr += str;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return wholeStr;
+    }
+    public static String getBodyStr() {
+        HttpServletRequest request = HttpKit.getRequest();
+        return HttpKit.getBodyStr(request);
+    }
     /**
      * 获取所有请求的值
      */
